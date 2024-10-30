@@ -1,0 +1,26 @@
+graph LR
+    A[Field Data Collection] --> B{Atmospheric Correction}
+    B --> C[Geometric Correction]
+    C --> D[Resampling]
+    D --> E[Mosaicking]
+    E --> F[Spectral Reflectance Extraction]
+    F --> G{Vegetation Indices Calculation}
+    G --> H[Data Division (Training/Testing)]
+    H --> I[Classification (Machine Learning)]
+    I --> J[Accuracy Assessment (Confusion Matrix)]
+    J --> K[Zonal Statistics (Degraded Wetland Extent)]
+    K --> L[Statistical Analysis (ANOVA)]
+    L --> M[Results & Discussion]
+    subgraph Data Preparation
+        B
+        C
+        D
+        E
+    end
+    subgraph Analysis
+        I
+        J
+        K
+        L
+        M
+    end
